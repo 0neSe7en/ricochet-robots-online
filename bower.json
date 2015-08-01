@@ -1,0 +1,22 @@
+{
+  "name": "ricochet-robots-online",
+  "version": "0.0.0",
+  "homepage": "https://github.com/0neSe7en/ricochet-robots-online",
+  "authors": [
+    "0neSe7en <siyuan.se7en@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~3.10.0",
+    "tweenjs": "*",
+    "easeljs": "~0.8.1"
+  }
+}
