@@ -5,6 +5,7 @@ function Robot(color, x, y) {
   this.shape = new createjs.Shape();
   this.x = x;
   this.y = y;
+  this.chosen = false;
 
   this._updateShape = function() {
     var gridSize = options.board.gridSize;
@@ -19,10 +20,19 @@ function Robot(color, x, y) {
   this._updateShape();
 
   this.moveTo = function(x, y) {
+    console.log(x, y);
     createjs.Tween.get(this.shape, {loop: false}).to(toBoard(x, y), 1200, createjs.Ease.getPowInOut(2));
   };
 
-  this.chosen = function() {
-    this.shape.shadow = new createjs.Shadow("#000000", 3, 3, 5);
+  this.choose = function() {
+    if (this.chosen) {
+      this.chosen = false;
+      this.shape.shadow = null;
+      return null;
+    } else {
+      this.chosen = true;
+      this.shape.shadow = new createjs.Shadow("#000000", 3, 3, 5);
+      return this;
+    }
   }
 }

@@ -13,6 +13,7 @@ function Grid(x, y) {
   };
 
   this.special = false;
+  this.available = true;
   this.kind = null;
   this.color = null;
   this.x = x;
